@@ -2,7 +2,39 @@
 
 *Hypotheses: H1 (form is the invariant), H2 (form resolved by context), H3 (context is what form is not), H4 (three conditions for form-ness), H5 (recursion), H6 (resolution is reversible), H7 (form is unprovable). See `starting-core.md` for full definitions.*
 
+*This log merges the first pass (Oct 7–8) and the collaborator review (Oct 8). Where the collaborator found more severe failures, the entry is marked [v0.4.0].*
+
 ---
+
+## Collaborator review revisions (v0.4.0)
+
+### H3: DROPPED as ontological claim (was "revised" in v0.3.0)
+
+**What changed:** "Context is not form" is false. Every context formology names is itself a form by H4's own test — the key signature occupies a slot, stands in for something recoverable, and means what it means only under Western notation. Confirmed by 8+ independent tracks (Luhmann, functor categories, Tarski, PL environments, Saussurean value, Frege, Aristotle/Kant polarity, Madhyamaka, Alexander's kettle, Ashby's list, Rubin's reversal).
+
+**What forced it:** The key-signature case (stress test) + eight independent formal/philosophical counterexamples.
+
+**Tag:** [CONFIRMED — the most heavily over-determined change in the log]
+
+### H6: DROPPED as stated (was "revised" in v0.3.0)
+
+**What changed:** Withdrawing a context does not return the original proformation — it produces a new state carrying a trace. The erased key signature's accidentals still record the old key. Repeal a statute and accrued rights stand (UK Interpretation Act 1978 s.16). Beta-reduction replaces the redex. Closures keep their environment. Husserl's epoché yields a new noema. Quine's indeterminacy says there was never a unique original. Confirmed by all six tracks with 11 independent counterexamples.
+
+**What forced it:** All six tracks, independently.
+
+**Tag:** [CONFIRMED — the most uniformly supported failure in the report]
+
+### H4: DROPPED as single test, replaced by two-kind split (was "demoted" in v0.3.0)
+
+**What changed:** H4 fails formology's own paradigm cases — the note on the staff, "issue," and the morpheme all fail condition (b). The first pass said H4 was "too restrictive" but kept it as the pro-form test. The collaborator showed it fails even as a pro-form test (the note doesn't substitute; it *is* the pitch). Replaced by a two-kind split: placeholders (anaphoric (b)) and patterns (≥1 open parameter). Excludes anchors and limits.
+
+**What forced it:** The seven-example table (6/7 fail (b) strictly) + the REGISTER case + model theory's free-variable/constant distinction.
+
+**Tag:** [CONFIRMED — the deepest change in the report, deeper than v0.3.0 found]
+
+---
+
+## First pass revisions (v0.3.0, retained)
 
 ## 1. H1: Active → Passive
 
