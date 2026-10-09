@@ -12,17 +12,17 @@ Formology adds something no existing field does at exactly two points:
 
 | Claim | Verdict | Closest prior art |
 |---|---|---|
-| H1 (form is what stays the same) | **Rename** of Peirce's type/token, category theory's invariant, Gentner's relational structure | Peirce, *Collected Papers* |
-| H4 (three conditions) | **Rename** of the linguistic pro-form definition (Lyons, Levinson) | Lyons, *Semantics* (1977) |
-| Proformation/conformation | **Rename** of anaphora resolution states (unresolved/resolved pro-form) | Halliday & Hasan, *Cohesion in English* (1976) |
-| The fork | **Rename** of Gentner's mapping limit | Gentner (1983) |
-| Metaphor magnitude | **Rename** of Gentner's systematicity | Gentner (1983) |
+| H1 (form is the invariant — what stays the same) | **Rename** of Peirce's type/token, category theory's invariant, Gentner's relational structure | Peirce, *Collected Papers* |
+| H4 (three conditions for form-ness) | **Rename** of the linguistic pro-form definition (Lyons, Levinson) | Lyons, *Semantics* (1977) |
+| Proformation/conformation (form before/after context) | **Rename** of anaphora resolution states (unresolved/resolved pro-form) | Halliday & Hasan, *Cohesion in English* (1976) |
+| The fork (where two things stop sharing form) | **Rename** of Gentner's mapping limit | Gentner (1983) |
+| Metaphor magnitude (strength as depth of fork) | **Rename** of Gentner's systematicity | Gentner (1983) |
 | H3 (context is what form is not) | **Rename** of Beer's "the environment is what the system is not" | Beer, *Diagnosing the System* (1985) |
-| H5 (recursion) | **Rename** of VSM's recursive viability + Peirce's token-of-a-type recursion | Beer (1972), Peirce |
+| H5 (recursion — resolved form is itself a form) | **Rename** of VSM's recursive viability + Peirce's token-of-a-type recursion | Beer (1972), Peirce |
 
 ## Which hypotheses fell or changed?
 
-- **H4 fell** as the form-ness test. It survives as the pro-form test, but it no longer defines what form *is* — only what pro-forms are.
+- **H4 fell** as the form-ness test (three conditions for something to count as form). It survives as the pro-form test, but it no longer defines what form *is* — only what pro-forms are.
 - **H1, H2, H3, H5, H6 were revised** (active→passive, undetermined→underspecified, level-qualified, ground-level-qualified, stateless/stateful).
 - **H7 survived** unchanged.
 - **H8, H9, H10 are new** (underspecification as legitimate state, recursion bottoms out at non-forms, stateless/stateful resolution).

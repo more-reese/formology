@@ -17,6 +17,8 @@ Formology is a framework studying form as the atomic unit: form is what carries 
 
 ## Verdict Table
 
+*Hypotheses are defined in the Ending Core above. Summary: H1 (invariant), H2 (resolved by context), H3 (context is not-form), H4 (pro-form test, demoted), H5 (recursion), H6 (reversible), H7 (unprovable), H8 (underspecification), H9 (ground level = non-forms), H10 (stateless/stateful).*
+
 | Claim | Verdict | Closest prior art | Tag |
 |---|---|---|---|
 | H1 (form = invariant) | Rename | Peirce type/token; category theory invariant | [CONFIRMED] |

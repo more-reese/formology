@@ -1,6 +1,6 @@
-# Ending Core — H1–H7 After the Research Pass
+# Ending Core — H1–H10 After the Research Pass
 
-*Each hypothesis marked: [SURVIVED] / [REVISED] / [DROPPED] / [NEW]*
+*Each hypothesis marked: [SURVIVED] / [REVISED] / [DROPPED] / [NEW]. H-numbers reference the hypotheses as defined in `starting-core.md` and below.*
 
 ---
 

@@ -1,6 +1,6 @@
 # Shared Cases — Run Through Every Deep-Tier Field
 
-*Each case targets an open question. Each field's treatment is compared.*
+*Hypotheses referenced: H1 (form is the invariant), H2 (form resolved by context), H3 (context is what form is not), H4 (three conditions for form-ness), H5 (recursion), H6 (resolution is reversible), H7 (form is unprovable). See `starting-core.md` for full definitions.*
 
 ---
 

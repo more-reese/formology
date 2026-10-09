@@ -1,6 +1,6 @@
 # Field Survey — Tiered by Depth of Shared Form
 
-*Each field examined through formology's practice loop: take it in its own language, render its central ideas as forms and contexts, compare at the level where the two become comparable, bring findings back.*
+*Hypotheses: H1 (form is the invariant), H2 (form resolved by context), H3 (context is what form is not), H4 (three conditions for form-ness), H5 (recursion), H6 (resolution is reversible), H7 (form is unprovable). See `starting-core.md` for full definitions. Each field examined through formology's practice loop.*
 
 ---
 

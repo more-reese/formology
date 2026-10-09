@@ -1,6 +1,6 @@
 # Stress Tests — H1 through H7
 
-*For each hypothesis: the strongest counterargument, whether it survives, and what rewrite (if any) fixes it.*
+*Hypotheses: H1 (form is the invariant), H2 (form resolved by context), H3 (context is what form is not), H4 (three conditions for form-ness), H5 (recursion), H6 (resolution is reversible), H7 (form is unprovable). See `starting-core.md` for full definitions.*
 
 ---
 
@@ -104,10 +104,10 @@ The question is whether this is a defect or a feature. In foundational systems (
 
 | Hypothesis | Survived? | Revision | Forced by |
 |---|---|---|---|
-| H1 | Yes, revised | Active → passive (form carries the range, not the determination) | Aristotle, business case |
-| H2 | Yes, revised | "Undetermined" → "underspecified" | Register case, linguistics |
-| H3 | Yes, revised | Added level-qualification | H5, Aristotle |
-| H4 | **Demoted** | Form-ness test → pro-form test | Music, law, business cases |
-| H5 | Yes, revised | "No ground level" → "no ground level for forms; bottoms out at non-forms" | Non-form case |
-| H6 | Yes, revised | Added stateless/stateful distinction | Business case |
-| H7 | Yes, unchanged | None | — |
+| H1 (form is the invariant) | Yes, revised | Active → passive (form carries the range, not the determination) | Aristotle, business case |
+| H2 (form resolved by context) | Yes, revised | "Undetermined" → "underspecified" | Register case, linguistics |
+| H3 (context is what form is not) | Yes, revised | Added level-qualification | H5 (recursion), Aristotle |
+| H4 (three conditions for form-ness) | **Demoted** | Form-ness test → pro-form test | Music, law, business cases |
+| H5 (recursion) | Yes, revised | "No ground level" → "no ground level for forms; bottoms out at non-forms" | Non-form case |
+| H6 (resolution is reversible) | Yes, revised | Added stateless/stateful distinction | Business case |
+| H7 (form is unprovable) | Yes, unchanged | None | — |
