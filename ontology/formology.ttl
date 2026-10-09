@@ -1,6 +1,9 @@
-# Formology — OWL 2 DL Ontology (Draft)
+# Formology — OWL 2 DL Ontology (v0.4.0 draft)
 
-*This is a draft ontology reflecting the STARTING core (H1–H7). It needs updating to reflect the ENDING core after the research pass. See docs/ending-core.md for the revised hypotheses.*
+*Reflects the ending core after both research passes. Key change from v0.3.0:
+Proformation and Conformation are no longer disjoint classes — they are
+replaced by a single relation resolvedBy(form, context). Level is derived
+as chain length. See docs/ending-core.md for the full revised hypotheses.*
 
 @prefix : <http://formology.org/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,67 +13,121 @@
 
 <http://formology.org/ontology> a owl:Ontology ;
     rdfs:label "Formology" ;
-    rdfs:comment "The study of form as the atomic unit. Form carries a range of potential determinations; context selects from the range." ;
-    owl:versionInfo "0.3.0-draft" .
+    rdfs:comment "The study of form as the atomic unit. Form is what stays the same across a declared range of variation, in a declared respect. A form is fixed but underspecified; its licensed readings are settled by the contexts in force for it." ;
+    owl:versionInfo "0.4.0-draft" .
 
-# Root class
+# ═══════════════════════════════════════════════════════════════════════
+# 1. ROOT CLASS — Form (H1, revised)
+# ═══════════════════════════════════════════════════════════════════════
+
 :Form a owl:Class ;
     rdfs:label "Form" ;
-    rdfs:comment "What carries a range of potential determinations. Context selects from the range. Form is what can stay the same when the instance changes." .
+    rdfs:comment "What stays the same across a declared range of variation, in a declared respect. The range is set by the comparison level, not by the form. 'Form' names what a resolution selects; it is distinct from what gets resolved (the proformation)." .
 
-# Pro-form subclass (H4 — demoted from form-ness test to pro-form test)
-:ProForm a owl:Class ;
-    rdfs:label "Pro-form" ;
-    rdfs:comment "A form that (a) occupies a structural slot, (b) substitutes for something recoverable, (c) gets its meaning from context. A subset of forms." ;
+# ═══════════════════════════════════════════════════════════════════════
+# 2. TWO KINDS OF FORM (H4, revised — replaces the three-condition test)
+# ═══════════════════════════════════════════════════════════════════════
+
+:Placeholder a owl:Class ;
+    rdfs:label "Placeholder" ;
+    rdfs:comment "A form that stands in for a recoverable antecedent (anaphoric (b)): pronouns, blank fields, 'do so.' The narrow linguistic proformation." ;
     rdfs:subClassOf :Form .
 
-# Resolution states (prefix axis)
-:Proformation a owl:Class ;
-    rdfs:label "Proformation" ;
-    rdfs:comment "Form before context is declared. Complete but underspecified — carries a range of potential determinations." ;
+:Pattern a owl:Class ;
+    rdfs:label "Pattern" ;
+    rdfs:comment "A form with at least one parameter left open: types, open terms, notations, 'issue.' The broad case." ;
     rdfs:subClassOf :Form .
 
-:Conformation a owl:Class ;
-    rdfs:label "Conformation" ;
-    rdfs:comment "Form after context is declared. Resolved — one determination selected from the range." ;
-    rdfs:subClassOf :Form .
-
-# NOTE: Proformation and Conformation are NOT disjoint across levels (per H5).
-# They are disjoint at the same level (a form can't be both pro- and con- at once),
-# but a conformation at level N is a proformation at level N+1.
-# This requires a level parameter not expressible in OWL without reification.
-
-# Non-form (ground level — H9)
-:RigidDesignator a owl:Class ;
-    rdfs:label "Rigid Designator" ;
-    rdfs:comment "Not a form. Directly refers rather than substituting. The ground level where the recursion bottoms out. (Kripke)" ;
+# Excluded from Form: anchors and limits (H8)
+:Anchor a owl:Class ;
+    rdfs:label "Anchor" ;
+    rdfs:comment "Not a form. Content from itself: proper names, one-time keys, brute facts, genotypes as causes. What contexts bottom out in." ;
     owl:disjointWith :Form .
 
-# Context
-:Context a owl:Class ;
-    rdfs:label "Context" ;
-    rdfs:comment "What form is not at a given level. Does the resolving. At the next level up, a context is itself a form in its own context." .
+:Limit a owl:Class ;
+    rdfs:label "Limit" ;
+    rdfs:comment "Not a form. Nothing to read: the unmarked state. What the apparatus is defined against." ;
+    owl:disjointWith :Form .
 
-:hasContext a owl:ObjectProperty ;
-    rdfs:label "has context" ;
-    rdfs:domain :Conformation ;
-    rdfs:range :Context .
+# ═══════════════════════════════════════════════════════════════════════
+# 3. RESOLUTION AS A RELATION (H5, revised — replaces disjoint classes)
+# ═══════════════════════════════════════════════════════════════════════
 
-# Recursion
+# NOTE: In v0.3.0, Proformation and Conformation were disjoint classes.
+# The collaborator review showed this contradicts recursion (H5) and
+# fails formology's own cases. They are now roles in a resolution relation.
+
+:resolvedBy a owl:ObjectProperty ;
+    rdfs:label "resolved by" ;
+    rdfs:comment "A resolution relation: resolvedBy(form, context). 'Proformation' = unresolved relative to a context; 'conformation' = resolved under it. Disjointness holds per record, not per thing." ;
+    rdfs:domain :Form ;
+    rdfs:range :Form .  # context is also a Form (H3 revised — context names a role, not a kind)
+
+# Level is derived as chain length, not primitive:
+# level(resolvedBy(f, c)) = 1 + level(c)
+# This cannot be expressed in OWL without reification; see practical-implications.md
+
+# ═══════════════════════════════════════════════════════════════════════
+# 4. ROLES IN A RESOLUTION (H3, revised — dropped as ontological claim)
+# ═══════════════════════════════════════════════════════════════════════
+
+# H3 as an ontological claim ("context is not form") is DROPPED.
+# Every context formology names is itself a form by H4's own test.
+# "Context" and "form" name roles in a resolution, not kinds of thing.
+# Both roles are filled by forms. Context for a form at level N is
+# form at level N+1 held fixed for the purpose of resolving N.
+
+:hasRole a owl:ObjectProperty ;
+    rdfs:label "has role in" ;
+    rdfs:comment "A form plays the 'form' role or the 'context' role in a given resolution. Both roles are filled by forms." ;
+    rdfs:domain :Form .
+
+# ═══════════════════════════════════════════════════════════════════════
+# 5. RECURSION (H5, revised)
+# ═══════════════════════════════════════════════════════════════════════
+
 :containsForm a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:label "contains form" ;
-    rdfs:comment "A conformation is itself a form at the next level. Recursive." ;
+    rdfs:comment "A resolved form is a form at the next level, possibly with emergent structure no input had. There is no self-resolving top (Tarski, Girard). The lowest levels are degenerate, not absent." ;
     rdfs:domain :Form ;
     rdfs:range :Form .
 
-# Resolution types (H10)
-:StatelessResolution a owl:Class ;
-    rdfs:label "Stateless Resolution" ;
-    rdfs:comment "Resolution that can be reversed by withdrawing context (variables, notes, lazy evaluation)." ;
-    rdfs:subClassOf :Conformation .
+# ═══════════════════════════════════════════════════════════════════════
+# 6. SUPERSSESSION (H6, dropped — replaced by "supersedable with trace")
+# ═══════════════════════════════════════════════════════════════════════
 
-:StatefulResolution a owl:Class ;
-    rdfs:label "Stateful Resolution" ;
-    rdfs:comment "Resolution that causes irreversible effects. Context can be withdrawn but effects persist (payments, shipments, decisions)." ;
-    rdfs:subClassOf :Conformation ;
-    owl:disjointWith :StatelessResolution .
+# H6 as stated ("resolution can be reversed") is DROPPED.
+# Resolution can be superseded, not undone. Withdrawal leaves a trace,
+# and the trace is a form. There is no return to the prior proformation.
+
+:supersededBy a owl:ObjectProperty ;
+    rdfs:label "superseded by" ;
+    rdfs:comment "A resolution record may be superseded by a new resolution whose context refers to the old one. The old record is not deleted; the trace persists as a form." ;
+    rdfs:domain :Form ;
+    rdfs:range :Form .
+
+# ═══════════════════════════════════════════════════════════════════════
+# 7. POSIT (H7, revised)
+# ═══════════════════════════════════════════════════════════════════════
+
+# "There is form" is a chosen posit (Fichte's Setzen, Spencer-Brown's
+# injunction), not a consequence of the nature of form. Every claim
+# built on it is disconfirmable in practice: by register rejection,
+# nesting failure, or invariance failure. Consistency confirms only
+# non-contradiction. The intent/outcome gap belongs to systems under
+# study, never to formology's own predictions.
+
+# ═══════════════════════════════════════════════════════════════════════
+# 8. REGISTER (H9, new)
+# ═══════════════════════════════════════════════════════════════════════
+
+:Register a owl:Class ;
+    rdfs:label "Register" ;
+    rdfs:comment "A second resolution record on an already-resolved thing, indexed to the reader's role. Whether one form underlies several registers is decided per case by whether the shared sense does work." ;
+    rdfs:subClassOf :Form .
+
+:hasReader a owl:ObjectProperty ;
+    rdfs:label "has reader" ;
+    rdfs:comment "The reader's role determines the register. Register lives in the reader, not in the word." ;
+    rdfs:domain :Register ;
+    rdfs:range :Form .

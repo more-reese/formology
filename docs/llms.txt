@@ -1,58 +1,61 @@
-# Formology — Research Pass Summary (for AI systems)
+# Formology — Research Pass Summary (v0.4.0, for AI systems)
 
-Formology is a framework studying form as the atomic unit: form is what carries a range of potential determinations, and context selects from that range. It emerged from re-translating Stafford Beer's VSM and is meant to be more general than VSM. A full research pass surveyed 20+ fields, ran 5 shared cases, and stress-tested 7 hypotheses. The core finding: formology's form/context distinction is well-established in linguistics (anaphora/deixis), Frege (sense/reference), and Aristotle (matter/form). The novel contribution is (1) underspecification as a legitimate state (not a deficiency — form carries a *range* before context selects), and (2) the application of this distinction to domains where it hasn't been used (business, cybernetics, law, music). H4 (the three-condition test for form-ness) is a rename of the linguistic pro-form definition and was demoted from "form-ness test" to "pro-form test." Form is broader than pro-form.
+Formology is an early-stage framework for the study of form. Two research passes (Oct 7–8 initial, Oct 8 collaborator review) across ~20 fields found that none of H1–H7 survives unchanged. H3 ("context is not form") and H6 ("resolution can be reversed") fail outright on counterexamples produced independently by six research tracks. H1, H2, H5, H7 survive in substance with rewrites. H4 (three conjunctive conditions) is the linguistic definition of a pro-form and excludes formology's own paradigm cases; it is replaced by a two-kind test (placeholders vs. patterns). The honest verdict: "a patchwork of renames with one or two additions." Every mechanism formology posits has a rigorous prior name: invariant under a group (Klein), type/token (Peirce), interpretation (Tarski), intension/extension (Carnap), character/content (Kaplan), open term + environment (PL theory), nesting of matter (Aristotle), functor categories (Lawvere), metalanguage hierarchy (Tarski), positing (Fichte, Spencer-Brown). No single field holds all seven. The additions are the practice loop, the reader as a context, and a vocabulary unifying Hart's penumbra, Hollnagel's WAI/WAD, music's preference rules, and the three-way match. Depth of overlap ("fork") is a profile across axes (structure, polarity, coverage, purpose), not a number.
 
-## Ending Core (H1–H10)
+## Ending Core (v0.4.0)
 
-1. Form is what *can* stay the same when the instance changes — it carries the range of what it could be, and context selects. [REVISED]
-2. Form gets its meaning from a declared context. Before context, form is complete but *underspecified* (carries a range). After context, it is resolved (a conformation). [REVISED — "undetermined" → "underspecified"]
-3. Within a level, context does the resolving; form is what gets resolved. Context is what form is not *at that level*. At the next level, the context is itself a form. [REVISED — level-qualified]
-4. [DEMOTED] The three conditions (structural slot, substitution, anaphoric interpretation) test for *pro-form-ness*, not form-ness. Pro-forms are a subset of forms. Form-ness is tested by H2 and H1.
-5. A resolved form is itself a form at the next level. For forms, no ground level — but recursion bottoms out at non-forms (rigid designators, proper names). [REVISED — ground-level qualified]
-6. Resolution is reversible by withdrawing context *when stateless*. Stateful resolution (payments, shipments) is irreversible. [REVISED — stateless/stateful]
-7. Form cannot be proven since proof requires form. It is posited; confirmation is in practice. [SURVIVED]
-8. [NEW] Form carries a range of potential determinations. Context selects; it does not create. This is underspecification, not emptiness.
-9. [NEW] The recursion bottoms out at non-forms: things that directly refer (rigid designators) rather than substitute.
-10. [NEW] Resolution is either stateless (reversible) or stateful (irreversible — effects persist after context withdrawal).
+1. Form is what stays the same across a declared range of variation, in a declared respect. The range is set by the comparison level, not by the form. "Form" names what a resolution selects; it is distinct from what gets resolved.
+2. A form is fixed but underspecified. Its licensed readings are settled by the contexts in force. No context: no reading licensed (proformation, a status relative to a level, never an exhibited item). One or more: a reading under each; a form may carry several at once. Where the form is silent, resolution adds content that becomes form at the next level. A form may be prior to its context or produced by it.
+3. In any one resolution there are two roles, form (what is read) and context (what it is read against). Both are filled by forms; context for a form at level N is form at level N+1 held fixed. "Context" names a role, not a kind. Direction of action is a choice of description.
+4. Form iff (a') it occupies a slot where something else could have stood and (c') its meaning there is settled from outside it. Two kinds: placeholders (also stand in for a recoverable antecedent) and patterns (have at least one parameter left open). Excluded: anchors (content from themselves) and limits (nothing to read). Form-hood is relative to the resolution system in play.
+5. Resolution is a relation resolvedBy(form, context); level is derived chain length; levels are supplied by cases. A resolved form is a form at the next level, possibly with emergent structure. There is no self-resolving top (Tarski, Girard). The lowest levels are degenerate, not absent; any ground is posited. Disjointness holds per record, not per thing.
+6. Resolution can be superseded, not undone. Where the open form and its context are stored separately, the record can be closed and the form remains; where resolution consumes the form, it cannot. Withdrawal leaves a trace; the trace is a form.
+7. "There is form" is a chosen posit. Every claim built on it is disconfirmable in practice by register rejection, nesting failure, or invariance failure. Consistency confirms only non-contradiction. The intent/outcome gap belongs to systems under study, never to formology's own predictions.
+8. (new) The other side of form is anchors and limits.
+9. (new) Register lives in the reader's role and glossary, as a second resolution record on an already-resolved thing.
+10. (new) The word "form" does two jobs: invariant (what a resolution selects) and substrate (what gets resolved). They coincide only as roles at a level.
 
-## Verdict Table
+## Verdict Table (v0.4.0)
 
-*Hypotheses are defined in the Ending Core above. Summary: H1 (invariant), H2 (resolved by context), H3 (context is not-form), H4 (pro-form test, demoted), H5 (recursion), H6 (reversible), H7 (unprovable), H8 (underspecification), H9 (ground level = non-forms), H10 (stateless/stateful).*
+*Hypotheses defined in the Ending Core above.*
 
 | Claim | Verdict | Closest prior art | Tag |
 |---|---|---|---|
-| H1 (form = invariant) | Rename | Peirce type/token; category theory invariant | [CONFIRMED] |
-| H2 (form resolved by context) | Partial overlap, generalized | Linguistics anaphora/deixis; Frege sense/reference | [CONFIRMED] |
-| H3 (context is what form is not) | Rename | Beer "environment is what system is not" | [CONFIRMED] |
-| H4 (three conditions) | Rename of pro-form definition | Lyons, *Semantics* (1977) | [CONFIRMED — demoted] |
-| H5 (recursion) | Rename + qualified | VSM recursion; Peirce token-of-type | [CONFIRMED] |
-| H6 (reversible resolution) | Partial overlap, qualified | PL theory lazy evaluation | [CONFIRMED — stateless only] |
-| H7 (unprovable, confirmed in practice) | Resonance | Spencer-Brown; Peirce pragmatism; von Foerster | [CONFIRMED] |
-| H8 (underspecification as state) | Novel | — (Frege has it as failure; linguistics has it as ambiguity) | [AFFIRMED — not yet tested beyond register case] |
-| H9 (ground level = non-forms) | Novel extension | Kripke rigid designation | [AFFIRMED — not yet tested beyond non-form case] |
-| H10 (stateless/stateful) | Novel distinction | — (PL theory has it implicitly in side-effects) | [AFFIRMED — not yet tested beyond business case] |
+| H1 invariance | Rename of invariant under a stated group / type / organization, minus the group | Klein 1872; Peirce; Maturana | failure as stated CONFIRMED; rewrite AFFIRMED |
+| H2 resolution by context | Rename of interpretation + intension/extension + character/content; adds the speech act and the practice loop | Tarski; Carnap 1947; Kaplan 1989 | core CONFIRMED; qualifiers fail CONFIRMED |
+| H3 context is not form | Falls absolutely; holds only level-relative; rename of Alexander's cut and Ashby's list | Alexander 1964; Luhmann; Tarski | failure CONFIRMED by 8+ fields |
+| H4 three conditions | Rename of linguistic pro-form; fails treatise's own examples; non-vacuity confirmed; replaced by two-kind split | Wikipedia/SEP pro-form & anaphora | single test fails CONFIRMED; split AFFIRMED; non-vacuity CONFIRMED |
+| H5 recursion | Rename of functor-category tower / Tarski hierarchy / Aristotle's matter levels; adds nothing on mechanism | Lawvere 1963; Tarski; Aristotle; Peirce | recursion CONFIRMED; "no ground" fails; "no top" CONFIRMED |
+| H6 reversibility | Falls; survives only as "supersedable with trace" | Interpretation Act 1978 s.16; beta-reduction; Peirce; Husserl | failure CONFIRMED by all six tracks |
+| H7 posited, confirmed in practice | Rename of Fichte's Setzen + Spencer-Brown's injunction; 12.2 circular | Fichte; Spencer-Brown 1969 | coherent CONFIRMED; 12.2 circular CONFIRMED |
+| practice loop | Partial novelty; no field states it as such | Hollnagel WAI/WAD; Halliday register | AFFIRMED |
+| reader as context | Modest novelty over BPMN/SIPOC | role-based requirements; WAI/WAD | AFFIRMED (PO case) |
+| metaphor magnitude | Rename of systematicity / relational depth; profile not number | Gentner 1983; Gentner & Clement 1988 | profile CONFIRMED |
+| POSIWID gap | Rename of WAI/WAD; source has four varieties | Hollnagel; Shorrock | CONFIRMED rename |
 
 ## Open Questions
 
-1. Does H8 (underspecification as a legitimate state) hold beyond the register case? Test in music (a note before key signature — is it "carrying a range" or just "ambiguous"?), law (a statute before a case — range or ambiguity?), and biology (a genotype before environment — range or ambiguity?).
-
-2. Does the Aristotelian inversion (formology's form = Aristotle's matter) cause problems for the productive morphology (proformation/conformation)? If form is the substrate, not the determinant, then "proformation" is the substrate before the determinant acts — which is *matter*, not *form* in Aristotle's terms. Should the terminology be inverted?
-
-3. Is the stateless/stateful distinction (H10) a binary or a spectrum? Are there partially stateful resolutions (where some effects are reversible and others aren't)?
-
-4. Does formology need the interpretant (Peirce's third element — the product of resolution)? Currently the conformation is both the state and the product. Separating them might add precision.
-
-5. Can the proformation/conformation terminology be retained despite being a rename of anaphora resolution states? The value is in the *generality* (applying beyond linguistics), not in the *naming*.
+- One form or several under "issue": polysemy vs homonymy cannot be settled by model theory; the test is whether the shared sense does work in each register.
+- Is the proformation prior to its context (notation) or produced by it (eigenform, Erlangen)? Not yet decided; both cases are real.
+- Index resolution by level (Tarski, Lawvere) or by time (Spencer-Brown re-entry)? Formology has only considered level.
+- Does the pivot chord realize two forms simultaneously or alternately? If simultaneously, the index must be on context, not merely on level.
+- Telos can no longer be bracketed: purpose is an input to which fork is chosen (Holyoak & Thagard), while formology treats it as an output.
+- A dial for context-sensitivity (plasticity vs canalisation) is needed; the case that would earn it (a site-insensitive standard) has not been run.
+- Does formology adopt the sign/thing (use/mention) distinction? Without it, "everything is form at maximum zoom" is literally true in the formal fields.
+- What formology studies that Goethe's morphology does not: the form/context relation across domains. This must be stated or the name is a rename.
 
 ## Key Citations
 
-- Spencer-Brown, G. (1969). *Laws of Form*. London: Allen & Unwin.
-- Frege, G. (1892). "Über Sinn und Bedeutung." *Zeitschrift für Philosophie und philosophische Kritik*, 100, 25–50.
-- Peirce, C.S. (1931–1958). *Collected Papers*. Cambridge: Harvard University Press.
-- Lyons, J. (1977). *Semantics*. Cambridge: Cambridge University Press.
-- Gentner, D. (1983). "Structure-mapping: A Theoretical Framework for Analogy." *Cognitive Science*, 7, 155–170.
-- Beer, S. (1985). *Diagnosing the System for Organizations*. Chichester: Wiley.
-- Kripke, S. (1980). *Naming and Necessity*. Cambridge: Harvard University Press.
-- Lakoff, G. & Johnson, M. (1980). *Metaphors We Live By*. Chicago: University of Chicago Press.
-- von Foerster, H. (1981). *Observing Systems*. Seaside: Intersystems Publications.
-- Aristotle. *Metaphysics*, Books Z–H.
+- SEP Model Theory: https://plato.stanford.edu/entries/model-theory/
+- SEP Tarski's Truth Definitions: https://plato.stanford.edu/entries/tarski-truth/
+- SEP Intensional Logic (Carnap): https://plato.stanford.edu/entries/logic-intensional/
+- SEP Form vs. Matter (Aristotle): https://plato.stanford.edu/entries/form-matter/
+- SEP Types and Tokens (Peirce): https://plato.stanford.edu/entries/types-tokens/
+- SEP Indexicals (Kaplan): https://plato.stanford.edu/entries/indexicals/
+- SEP Anaphora: https://plato.stanford.edu/entries/anaphora/
+- Kauffman, Laws of Form exposition: https://homepages.math.uic.edu/~kauffman/Laws.pdf
+- Alexander, Notes on the Synthesis of Form (1964)
+- Gentner & Clement 1988: https://groups.psych.northwestern.edu/gentner/newpdfpapers/GentnerClement88.pdf
+- Hollnagel WAI/WAD: https://www.skybrary.aero/sites/default/files/bookshelf/3934.pdf
+- Interpretation Act 1978 s.16: https://www.legislation.gov.uk/ukpga/1978/30/section/16
+- Garfield 1994, Emptiness of Emptiness: https://www.ahandfulofleaves.org/documents/Articles/Dependent%20Arising%20and%20the%20Emptiness%20of%20Emptiness_PEW_Garfield_1994.pdf
