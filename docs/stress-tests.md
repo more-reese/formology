@@ -2,6 +2,8 @@
 
 *Hypotheses: H1 (form is the invariant), H2 (form resolved by context), H3 (context is what form is not), H4 (three conditions for form-ness), H5 (recursion), H6 (resolution is reversible), H7 (form is unprovable). See `starting-core.md` for full definitions.*
 
+> **Note (v0.4.0):** The first pass (Oct 7–8) revised all seven hypotheses but did not drop any. The collaborator review (Oct 8) was substantially more rigorous and found that **H3 and H6 fail outright** on counterexamples produced independently by six research tracks. H4's failure is also more severe than the first pass found: it fails formology's own paradigm cases (the note on the staff, "issue," the morpheme), not just "too restrictive." See `docs/reviews/collaborator-review-2026-10-08.md` for the full review. The stress tests below have been updated to reflect both passes.
+
 ---
 
 ## H1. Form is what stays the same when the instance changes.
@@ -100,14 +102,14 @@ The question is whether this is a defect or a feature. In foundational systems (
 
 ---
 
-## Summary of stress test results
+## Summary of stress test results (updated v0.4.0)
 
 | Hypothesis | Survived? | Revision | Forced by |
 |---|---|---|---|
-| H1 (form is the invariant) | Yes, revised | Active → passive (form carries the range, not the determination) | Aristotle, business case |
-| H2 (form resolved by context) | Yes, revised | "Undetermined" → "underspecified" | Register case, linguistics |
-| H3 (context is what form is not) | Yes, revised | Added level-qualification | H5 (recursion), Aristotle |
-| H4 (three conditions for form-ness) | **Demoted** | Form-ness test → pro-form test | Music, law, business cases |
-| H5 (recursion) | Yes, revised | "No ground level" → "no ground level for forms; bottoms out at non-forms" | Non-form case |
-| H6 (resolution is reversible) | Yes, revised | Added stateless/stateful distinction | Business case |
-| H7 (form is unprovable) | Yes, unchanged | None | — |
+| H1 (form is the invariant) | Revised — has a free parameter | "Stays the same" → "stays the same across a declared range, in a declared respect." Depends on H2, not ground-floor. | Klein, alpha-equivalence, Ship of Theseus, "issue" case (5 tracks) |
+| H2 (form resolved by context) | Revised — four qualifiers lost | "Complete" → Hart's open texture; "undetermined" → Carnap's complete function; "declared" → recognized not declared; "one bit" → pivot chord | Hart, Kaplan, Carnap, music (4 tracks) |
+| H3 (context is what form is not) | **Dropped** as ontological claim; survives as role naming | "Context is not form" fails — every context is itself a form by H4's own test. Survives only as "context names a role, not a kind." | 8+ independent tracks |
+| H4 (three conditions for form-ness) | **Dropped** as single test; replaced by two-kind split | Fails formology's own cases (note on staff, "issue," morpheme all fail (b)). Split into placeholders (anaphoric (b)) and patterns (≥1 open parameter). Excludes anchors and limits. | 7-example table, REGISTER case, model theory (6 tracks) |
+| H5 (recursion, no ground level) | Revised — keeps recursion, loses "no ground" | Recursion confirmed with mechanism (Tarski, Lawvere, eigenform). "No ground" fails (Frege, Aristotle, Kant, PL literals). "No top" confirmed (Tarski, Girard). | Tarski, Girard, Peirce, Frege, Aristotle (4 tracks) |
+| H6 (resolution is reversible) | **Dropped** as stated; replaced by "supersedable with trace" | Withdrawing context does not return the original proformation — it produces a new state carrying a trace. Every track produced independent counterexamples. | All 6 tracks (11 independent cases) |
+| H7 (form is unprovable) | Revised — survives, but treatise 12.2 is circular | H7 survives as a chosen posit (Fichte, Spencer-Brown). But 12.2's self-confirmation is circular, and 7.5 as written absorbs counter-evidence. Add disconfirmation clause. | Stress test, philosophy, formal, cybernetics |

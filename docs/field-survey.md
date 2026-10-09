@@ -2,6 +2,19 @@
 
 *Hypotheses: H1 (form is the invariant), H2 (form resolved by context), H3 (context is what form is not), H4 (three conditions for form-ness), H5 (recursion), H6 (resolution is reversible), H7 (form is unprovable). See `starting-core.md` for full definitions. Each field examined through formology's practice loop.*
 
+> **Note (v0.4.0):** This survey reflects the first research pass (Oct 7–8). The collaborator review (Oct 8) identified additional prior art that the first pass missed and revised several fork-depth assessments. Key additions from the collaborator review:
+> - **Model theory (Tarski/Carnap)** promoted to deep tier — the closest formal ancestor of H2; interpretation of an open formula by a structure does H2 cleaner than formology does
+> - **Kaplan's character/content** added to deep tier — structurally identical to H2 with a complete function; context is a parameter, not a declaration
+> - **PL theory** promoted from middle to deep — open terms, thunks, and closures separate having a context from being resolved, which formology fuses
+> - **Alexander** promoted from middle to deep — the kettle/stove passage gives a worked instance of H5 and breaks H3-as-absolute
+> - **Eigenform (von Foerster)** added — objects as fixed points; form is *produced* by the operation, not read from a pre-existing invariant
+> - **Hart's penumbra** added to law — core/penumbra as the clearest statement of "fixed but underspecified"
+> - **Hollnagel's WAI/WAD** added to business — the actual source of the POSIWID gap, with four varieties (imagined, prescribed, disclosed, done)
+> - **Madhyamaka (Nagarjuna)** promoted from shallow — dependent origination = H4(c) as a universal; "emptiness of emptiness" = H5+H7 with more care than the treatise
+> - **Canalisation** added to genetics — a form built so context barely matters; reverses the arrow of H3
+>
+> See `docs/reviews/collaborator-review-2026-10-08.md` for the full collaborator review.
+
 ---
 
 ## Deep Tier
