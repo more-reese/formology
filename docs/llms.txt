@@ -1,0 +1,56 @@
+# Formology — Research Pass Summary (for AI systems)
+
+Formology is a framework studying form as the atomic unit: form is what carries a range of potential determinations, and context selects from that range. It emerged from re-translating Stafford Beer's VSM and is meant to be more general than VSM. A full research pass surveyed 20+ fields, ran 5 shared cases, and stress-tested 7 hypotheses. The core finding: formology's form/context distinction is well-established in linguistics (anaphora/deixis), Frege (sense/reference), and Aristotle (matter/form). The novel contribution is (1) underspecification as a legitimate state (not a deficiency — form carries a *range* before context selects), and (2) the application of this distinction to domains where it hasn't been used (business, cybernetics, law, music). H4 (the three-condition test for form-ness) is a rename of the linguistic pro-form definition and was demoted from "form-ness test" to "pro-form test." Form is broader than pro-form.
+
+## Ending Core (H1–H10)
+
+1. Form is what *can* stay the same when the instance changes — it carries the range of what it could be, and context selects. [REVISED]
+2. Form gets its meaning from a declared context. Before context, form is complete but *underspecified* (carries a range). After context, it is resolved (a conformation). [REVISED — "undetermined" → "underspecified"]
+3. Within a level, context does the resolving; form is what gets resolved. Context is what form is not *at that level*. At the next level, the context is itself a form. [REVISED — level-qualified]
+4. [DEMOTED] The three conditions (structural slot, substitution, anaphoric interpretation) test for *pro-form-ness*, not form-ness. Pro-forms are a subset of forms. Form-ness is tested by H2 and H1.
+5. A resolved form is itself a form at the next level. For forms, no ground level — but recursion bottoms out at non-forms (rigid designators, proper names). [REVISED — ground-level qualified]
+6. Resolution is reversible by withdrawing context *when stateless*. Stateful resolution (payments, shipments) is irreversible. [REVISED — stateless/stateful]
+7. Form cannot be proven since proof requires form. It is posited; confirmation is in practice. [SURVIVED]
+8. [NEW] Form carries a range of potential determinations. Context selects; it does not create. This is underspecification, not emptiness.
+9. [NEW] The recursion bottoms out at non-forms: things that directly refer (rigid designators) rather than substitute.
+10. [NEW] Resolution is either stateless (reversible) or stateful (irreversible — effects persist after context withdrawal).
+
+## Verdict Table
+
+| Claim | Verdict | Closest prior art | Tag |
+|---|---|---|---|
+| H1 (form = invariant) | Rename | Peirce type/token; category theory invariant | [CONFIRMED] |
+| H2 (form resolved by context) | Partial overlap, generalized | Linguistics anaphora/deixis; Frege sense/reference | [CONFIRMED] |
+| H3 (context is what form is not) | Rename | Beer "environment is what system is not" | [CONFIRMED] |
+| H4 (three conditions) | Rename of pro-form definition | Lyons, *Semantics* (1977) | [CONFIRMED — demoted] |
+| H5 (recursion) | Rename + qualified | VSM recursion; Peirce token-of-type | [CONFIRMED] |
+| H6 (reversible resolution) | Partial overlap, qualified | PL theory lazy evaluation | [CONFIRMED — stateless only] |
+| H7 (unprovable, confirmed in practice) | Resonance | Spencer-Brown; Peirce pragmatism; von Foerster | [CONFIRMED] |
+| H8 (underspecification as state) | Novel | — (Frege has it as failure; linguistics has it as ambiguity) | [AFFIRMED — not yet tested beyond register case] |
+| H9 (ground level = non-forms) | Novel extension | Kripke rigid designation | [AFFIRMED — not yet tested beyond non-form case] |
+| H10 (stateless/stateful) | Novel distinction | — (PL theory has it implicitly in side-effects) | [AFFIRMED — not yet tested beyond business case] |
+
+## Open Questions
+
+1. Does H8 (underspecification as a legitimate state) hold beyond the register case? Test in music (a note before key signature — is it "carrying a range" or just "ambiguous"?), law (a statute before a case — range or ambiguity?), and biology (a genotype before environment — range or ambiguity?).
+
+2. Does the Aristotelian inversion (formology's form = Aristotle's matter) cause problems for the productive morphology (proformation/conformation)? If form is the substrate, not the determinant, then "proformation" is the substrate before the determinant acts — which is *matter*, not *form* in Aristotle's terms. Should the terminology be inverted?
+
+3. Is the stateless/stateful distinction (H10) a binary or a spectrum? Are there partially stateful resolutions (where some effects are reversible and others aren't)?
+
+4. Does formology need the interpretant (Peirce's third element — the product of resolution)? Currently the conformation is both the state and the product. Separating them might add precision.
+
+5. Can the proformation/conformation terminology be retained despite being a rename of anaphora resolution states? The value is in the *generality* (applying beyond linguistics), not in the *naming*.
+
+## Key Citations
+
+- Spencer-Brown, G. (1969). *Laws of Form*. London: Allen & Unwin.
+- Frege, G. (1892). "Über Sinn und Bedeutung." *Zeitschrift für Philosophie und philosophische Kritik*, 100, 25–50.
+- Peirce, C.S. (1931–1958). *Collected Papers*. Cambridge: Harvard University Press.
+- Lyons, J. (1977). *Semantics*. Cambridge: Cambridge University Press.
+- Gentner, D. (1983). "Structure-mapping: A Theoretical Framework for Analogy." *Cognitive Science*, 7, 155–170.
+- Beer, S. (1985). *Diagnosing the System for Organizations*. Chichester: Wiley.
+- Kripke, S. (1980). *Naming and Necessity*. Cambridge: Harvard University Press.
+- Lakoff, G. & Johnson, M. (1980). *Metaphors We Live By*. Chicago: University of Chicago Press.
+- von Foerster, H. (1981). *Observing Systems*. Seaside: Intersystems Publications.
+- Aristotle. *Metaphysics*, Books Z–H.

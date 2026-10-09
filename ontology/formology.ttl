@@ -1,0 +1,76 @@
+# Formology — OWL 2 DL Ontology (Draft)
+
+*This is a draft ontology reflecting the STARTING core (H1–H7). It needs updating to reflect the ENDING core after the research pass. See docs/ending-core.md for the revised hypotheses.*
+
+@prefix : <http://formology.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://formology.org/ontology> a owl:Ontology ;
+    rdfs:label "Formology" ;
+    rdfs:comment "The study of form as the atomic unit. Form carries a range of potential determinations; context selects from the range." ;
+    owl:versionInfo "0.3.0-draft" .
+
+# Root class
+:Form a owl:Class ;
+    rdfs:label "Form" ;
+    rdfs:comment "What carries a range of potential determinations. Context selects from the range. Form is what can stay the same when the instance changes." .
+
+# Pro-form subclass (H4 — demoted from form-ness test to pro-form test)
+:ProForm a owl:Class ;
+    rdfs:label "Pro-form" ;
+    rdfs:comment "A form that (a) occupies a structural slot, (b) substitutes for something recoverable, (c) gets its meaning from context. A subset of forms." ;
+    rdfs:subClassOf :Form .
+
+# Resolution states (prefix axis)
+:Proformation a owl:Class ;
+    rdfs:label "Proformation" ;
+    rdfs:comment "Form before context is declared. Complete but underspecified — carries a range of potential determinations." ;
+    rdfs:subClassOf :Form .
+
+:Conformation a owl:Class ;
+    rdfs:label "Conformation" ;
+    rdfs:comment "Form after context is declared. Resolved — one determination selected from the range." ;
+    rdfs:subClassOf :Form .
+
+# NOTE: Proformation and Conformation are NOT disjoint across levels (per H5).
+# They are disjoint at the same level (a form can't be both pro- and con- at once),
+# but a conformation at level N is a proformation at level N+1.
+# This requires a level parameter not expressible in OWL without reification.
+
+# Non-form (ground level — H9)
+:RigidDesignator a owl:Class ;
+    rdfs:label "Rigid Designator" ;
+    rdfs:comment "Not a form. Directly refers rather than substituting. The ground level where the recursion bottoms out. (Kripke)" ;
+    owl:disjointWith :Form .
+
+# Context
+:Context a owl:Class ;
+    rdfs:label "Context" ;
+    rdfs:comment "What form is not at a given level. Does the resolving. At the next level up, a context is itself a form in its own context." .
+
+:hasContext a owl:ObjectProperty ;
+    rdfs:label "has context" ;
+    rdfs:domain :Conformation ;
+    rdfs:range :Context .
+
+# Recursion
+:containsForm a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "contains form" ;
+    rdfs:comment "A conformation is itself a form at the next level. Recursive." ;
+    rdfs:domain :Form ;
+    rdfs:range :Form .
+
+# Resolution types (H10)
+:StatelessResolution a owl:Class ;
+    rdfs:label "Stateless Resolution" ;
+    rdfs:comment "Resolution that can be reversed by withdrawing context (variables, notes, lazy evaluation)." ;
+    rdfs:subClassOf :Conformation .
+
+:StatefulResolution a owl:Class ;
+    rdfs:label "Stateful Resolution" ;
+    rdfs:comment "Resolution that causes irreversible effects. Context can be withdrawn but effects persist (payments, shipments, decisions)." ;
+    rdfs:subClassOf :Conformation ;
+    owl:disjointWith :StatelessResolution .
