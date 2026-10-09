@@ -1,29 +1,35 @@
-# Ending Core — H1–H10 After the Research Pass
+# Ending Core — After Both Research Passes (v0.4.0)
 
-*Each hypothesis marked: [SURVIVED] / [REVISED] / [DROPPED] / [NEW]. H-numbers reference the hypotheses as defined in `starting-core.md` and below.*
-
----
-
-**H1.** [REVISED] Form is what *can* stay the same when the instance changes — it carries the range of what it could be, and context selects from that range. (Was: "Form is what stays the same when the instance changes." Revision: active → passive. Forced by Aristotle and the business case.)
-
-**H2.** [REVISED] Form gets its meaning from a declared context. Before a context is declared, form is complete but *underspecified* — it carries a range of possible determinations. Once a context is declared, it is resolved (a conformation) — one determination is selected from the range. (Was: "complete but undetermined." Revision: "undetermined" → "underspecified." Forced by the register case and linguistics.)
-
-**H3.** [REVISED] Within a given level, context does the resolving; form is what gets resolved. Context is what form is not *at that level*. At the next level up, the context is itself a form in its own context (per H5). (Was: unqualified "context is what form is not." Revision: added level-qualification. Forced by H5 and the Aristotelian inversion.)
-
-**H4.** [DEMOTED — no longer the form-ness test] Something counts as a *pro-form* only if it (a) occupies a structural slot, (b) stands in for something recoverable, and (c) gets its meaning from context rather than from itself. All three must hold. Pro-forms are a *subset* of forms. Form-ness is tested by H2 (does it get its meaning from a declared context?) and H1 (does it carry a range across instances?). (Was: the test for form-ness. Demotion forced by the music, law, and business cases, and by the fact that H4's three conditions are the textbook definition of a linguistic pro-form.)
-
-**H5.** [REVISED] Recursion: a resolved form is itself a form at the next level up. For forms, there is no ground level — but the recursion bottoms out at non-forms: things that directly refer (rigid designators, proper names, mathematical constants). (Was: "There is no ground level." Revision: qualified by the existence of non-forms. Forced by the non-form case.)
-
-**H6.** [REVISED] Resolution can be reversed by withdrawing the context, *when resolution is stateless* (the form's state is the only thing that changes). When resolution is *stateful* (resolution causes irreversible effects — a payment, a shipment, a decision), the context can be withdrawn but the effects persist. (Was: unconditional reversibility. Revision: stateless/stateful distinction. Forced by the business case.)
-
-**H7.** [SURVIVED] Form cannot be proven, since proof requires form. It is posited, and confirmation happens in practice. (No change. The self-referentiality is the standard foundational move, confirmed by Spencer-Brown and Peirce.)
+*Two research passes: the initial pass (Oct 7–8) and the collaborator review (Oct 8). The collaborator review was substantially more rigorous and found failures the first pass missed. This ending core supersedes the v0.3.0 ending core. H-numbers reference `starting-core.md` for the original formulations.*
 
 ---
 
-## New hypotheses (not in the starting core)
+**H1.** [REVISED — confirmed by 5 independent tracks] Form is what stays the same across a declared range of variation, in a declared respect. The range is set by the comparison level, not by the form. Different declared ranges find different forms in the same material. "Form" names what a resolution selects (the invariant); it is distinct from what gets resolved (the proformation). H1 depends on H2 and is not ground-floor. (Forced by Klein's Erlangen program, alpha-equivalence vs. Kaplan vs. Hjelmslev, the Ship of Theseus, and the "issue" case.)
 
-**H8.** [NEW] Form carries a *range* of potential determinations. Context *selects* from the range; it does not *create* meaning. This is underspecification, not emptiness. (Forced by the register case. Distinguishes formology from Frege, where sense-without-reference is a failure — in formology, it is a legitimate state.)
+**H2.** [REVISED — four qualifiers lost] A form is fixed but underspecified. Its licensed readings are settled by the contexts in force for it. With no context in force, no reading is licensed (proformation — a status relative to a level, never an exhibited item). With one or more contexts, a reading is licensed under each; a form may carry several at once. Where the form is silent, resolution adds content that becomes form at the next level. A form may be prior to its context (notation) or produced by it (eigenform). (Losses: "complete" → Hart's open texture; "undetermined" → Carnap's intension is a complete function; "declared" → registers are recognized not declared, Kaplan's context is a parameter; "one bit" → the pivot chord is doubly determined.)
 
-**H9.** [NEW] The recursion bottoms out at non-forms: things that directly refer rather than substitute. Rigid designators (Kripke) are the ground level. (Forced by the non-form case. Reconciles H5 with the existence of things that are not forms.)
+**H3.** [DROPPED as ontological claim; SURVIVES as role naming] In any one resolution there are two roles: form (what is read) and context (what it is read against). Both roles are filled by forms. Context for a form at level N is form at level N+1 held fixed for the purpose of resolving N. "Context" names a role, not a kind. The direction of action is a choice of description; demands and constraints run both ways. (The claim "context is not form" falls — confirmed by 8+ tracks. The key signature passes H4. The claim survives only as a level-relative role assignment.)
 
-**H10.** [NEW] Resolution is either stateless (reversible by context withdrawal) or stateful (irreversible — effects persist after context withdrawal). (Forced by the business case. Refines H6 into a disjunction.)
+**H4.** [DROPPED as single conjunctive test; REPLACED by two-kind split] Form iff (a') it occupies a slot where something else could have stood, and (c') its meaning there is settled from outside it. Two kinds of form:
+- **Placeholders** (also satisfy (b) in the anaphoric sense: pronouns, blank fields, "do so") — the narrow linguistic proformation
+- **Patterns** (have at least one parameter left open: types, open terms, notations, "issue") — the broad case
+
+Excluded: **anchors** (content from themselves: proper names, one-time keys, brute facts, genotypes as causes) and **limits** (nothing to read: the unmarked state). Form-hood is relative to the resolution system in play (Haskell's overloaded literals are forms; C's are not).
+
+(The single three-condition test failed formology's own paradigm cases: the note on the staff, "issue," and the morpheme all fail (b). The split lets both "issue is a form" and "Venus is not" come out true. Forced by the seven-example table, the REGISTER case, and model theory's free-variable/constant distinction.)
+
+**H5.** [REVISED] Resolution is a relation `resolvedBy(form, context)`; "level" is chain length, derived not primitive; levels are supplied by cases, not by formology. A resolved form is a form at the next level, possibly with emergent structure no input had. There is no self-resolving top (Tarski, Girard). The lowest levels are degenerate (unsayable or trivial), not absent; no ground is reachable from inside, and any ground is posited (H7), not resolved. Disjointness of proformation/conformation holds per record, not per thing. (Forced by Tarski's hierarchy, Girard's paradox, the pivot chord showing the index must be on context, and genetic assimilation showing backward direction.)
+
+**H6.** [DROPPED as stated] Resolution can be superseded or revised, not undone. Where the open form and its context are stored separately (a score, a source file, an unforced thunk, a resolution record), the record can be closed and the open form is still there; where resolution consumes the form, it cannot. Withdrawal leaves a trace, and the trace is a form that records the resolution that was withdrawn. There is no return to the prior proformation. (Forced by all six tracks: the erased key signature's accidentals, the UK Interpretation Act 1978 s.16, beta-reduction replacing the redex, closures keeping their environment, Husserl's epoché yielding a new noema, Quine's indeterminacy.)
+
+**H7.** [REVISED] "There is form" is a chosen posit (Fichte's Setzen, Spencer-Brown's injunction), not a consequence of the nature of form. Every claim built on it is disconfirmable in practice: by register rejection (competent users of a case's register reject the rendering), by nesting failure (a declared nesting is shown not to nest), or by invariance failure (an agreed instance lacks the claimed invariant). Consistency confirms only non-contradiction; use "consistent" for reasoner results and "confirmed" only for case results. The gap between intent and outcome (treatise 7.5) belongs to systems under study and is never an excuse for formology's own predictions. (Treatise 12.2's self-confirmation sentence is struck — it is circular. Credit Spencer-Brown's injunctive method and Fichte's Setzen by name.)
+
+---
+
+## New findings (not in the starting core or the v0.3.0 ending core)
+
+**H8.** [NEW — earned by the NON-FORM case, confirmed by 5 tracks] The other side of form is anchors and limits. Anchors have content from themselves (proper names, one-time keys, brute facts); limits have nothing to read (the unmarked state). Every non-form is one or the other. This is where H5's recursion bottoms out.
+
+**H9.** [NEW — earned by the REGISTER case, confirmed by law, music, and the PO case] Register lives in the reader's role and the glossary that role brings, not in the word. It is a second resolution record on an already-resolved thing, indexed to the reader. Whether one form underlies several registers is decided per case by whether the shared sense does work when a finding is brought back into each register.
+
+**H10.** [NEW — from the collaborator review, not the first pass] The "two jobs" problem: the word "form" does two opposite jobs in every deep field. The invariant (Peirce's type, Aristotle's form) and the undetermined thing a context determines (Peirce's token-before-language, Aristotle's matter) are different items. Formology merges them in one word, which is the source of the disjointness-vs-recursion problem, the "can a proformation ever be exhibited" problem, and the form/proformation collapse suspicion. The minimal fix: "form" (H1) is what a resolution selects; "proformation" (H2) is what gets resolved; they coincide only as roles at a level.
